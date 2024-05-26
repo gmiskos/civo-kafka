@@ -3,7 +3,7 @@ kind: KafkaTopic
 metadata:
   name: my-topic
   labels:
-    strimzi.io/cluster: apk-cluster
+    strimzi.io/cluster: gmiskos
 spec:
   partitions: 1
   replicas: 1
