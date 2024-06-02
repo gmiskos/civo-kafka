@@ -20,7 +20,7 @@ spec:
       volumes:
       - id: 0
         type: persistent-claim
-        size: 2Gi  # Reduced storage size for minimal resources
+        size: 3Gi  # Reduced storage size for minimal resources
         deleteClaim: false
   zookeeper:
     replicas: 1
