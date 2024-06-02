@@ -20,7 +20,7 @@ spec:
       volumes:
       - id: 0
         type: persistent-claim
-        size: 10Gi
+        size: 1Gi
         deleteClaim: false
       - id: 1
         type: persistent-claim
