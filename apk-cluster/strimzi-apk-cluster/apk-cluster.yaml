@@ -29,5 +29,5 @@ spec:
       size: 1Gi
       deleteClaim: false
   entityOperator:
-    #topicOperator: {}
-    #userOperator: {}
+    topicOperator: {}
+    userOperator: {}
