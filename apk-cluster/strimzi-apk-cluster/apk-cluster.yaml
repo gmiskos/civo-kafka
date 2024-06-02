@@ -18,20 +18,26 @@ spec:
     storage:
       type: jbod
       volumes:
-      - id: 0
-        type: persistent-claim
-        size: 1Gi
-        deleteClaim: false
-      - id: 1
-        type: persistent-claim
-        size: 1Gi
-        deleteClaim: false
+        - id: 0
+          type: persistent-claim
+          size: 1Gi
+          deleteClaim: false
+          persistentVolumeClaim:
+            claimName: kafka-data-0  # Specify the name of the PVC here
+        - id: 1
+          type: persistent-claim
+          size: 1Gi
+          deleteClaim: false
+          persistentVolumeClaim:
+            claimName: kafka-data-1  # Specify the name of the PVC here
   zookeeper:
     replicas: 1
     storage:
       type: persistent-claim
       size: 1Gi
       deleteClaim: false
+      persistentVolumeClaim:
+        claimName: zookeeper-data  # Specify the name of the PVC here
   entityOperator:
     topicOperator: {}
     userOperator: {}
