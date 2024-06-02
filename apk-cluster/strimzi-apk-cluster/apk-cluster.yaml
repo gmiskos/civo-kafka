@@ -29,5 +29,6 @@ spec:
       size: 1Gi
       deleteClaim: false
   entityOperator:
-    topicOperator: {}
+    topicOperator: 
+      reconciliationIntervalSeconds: 120  # Increased reconciliation interval
     userOperator: {}
