@@ -8,5 +8,5 @@ spec:
   partitions: 1
   replicas: 1
   config:
-    retention.ms: 3600000
-    segment.bytes: 2612144000
+    retention.ms: 60000       # 1 minute retention time
+    segment.bytes: 10485760   # 10 MB segment size
