@@ -19,25 +19,19 @@ spec:
       type: jbod
       volumes:
         - id: 0
-          type: persistent-claim
-          size: 5Gi
-          deleteClaim: false
-          persistentVolumeClaim:
-            claimName: kafka-data-0  # Specify the name of the PVC here
+          type: ephemeral
+          size: 2Gi  # Adjust the size if needed
+          deleteClaim: true  # Set deleteClaim to true for ephemeral storage
         - id: 1
-          type: persistent-claim
-          size: 5Gi
-          deleteClaim: false
-          persistentVolumeClaim:
-            claimName: kafka-data-1  # Specify the name of the PVC here
+          type: ephemeral
+          size: 2Gi  # Adjust the size if needed
+          deleteClaim: true  # Set deleteClaim to true for ephemeral storage
   zookeeper:
     replicas: 1
     storage:
-      type: persistent-claim
-      size: 5Gi
-      deleteClaim: false
-      persistentVolumeClaim:
-        claimName: zookeeper-data  # Specify the name of the PVC here
+      type: ephemeral
+      size: 2Gi  # Adjust the size if needed
+      deleteClaim: true  # Set deleteClaim to true for ephemeral storage
   entityOperator:
     topicOperator: {}
     userOperator: {}
