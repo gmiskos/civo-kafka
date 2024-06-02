@@ -31,4 +31,4 @@ spec:
   entityOperator:
     topicOperator: 
       reconciliationIntervalSeconds: 120  # Increased reconciliation interval
-    userOperator: {}
+    #userOperator: {}
