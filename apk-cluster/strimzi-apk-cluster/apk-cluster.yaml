@@ -20,13 +20,17 @@ spec:
       volumes:
       - id: 0
         type: persistent-claim
-        size: 3Gi  # Reduced storage size for minimal resources
+        size: 10Gi
+        deleteClaim: false
+      - id: 1
+        type: persistent-claim
+        size: 10Gi
         deleteClaim: false
   zookeeper:
     replicas: 1
     storage:
       type: persistent-claim
-      size: 2Gi
+      size: 10Gi
       deleteClaim: false
   entityOperator:
     topicOperator: {}
